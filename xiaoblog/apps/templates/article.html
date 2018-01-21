@@ -1,0 +1,26 @@
+{% extends 'baseindex.html' %}
+
+{% block pageHeader %}
+<header class="intro-header" style="background-image: url('{{ url_for('static',filename='theme/img/post-bg.jpg' )}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="post-heading">
+                        <h1>{{ article.title }}</h1>
+                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+                        <span class="meta">Posted by <a href="#">ouyangm</a> {{ article.create_time }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block body %}
+ <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    {{ article.content | safe  }}
+
+                </div>
+ </div>
+{% endblock %}

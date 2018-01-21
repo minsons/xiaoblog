@@ -1,0 +1,20 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+{{ current_user.is_authenticated }}
+
+{% if current_user.is_authenticated  %}
+  您已经登陆成功！
+{% else %}
+ 请重新登陆
+{% endif %}
+<script>
+ window.onload = function()
+ {
+     if ('{{ current_user.is_authenticated }}' == 'False') {
+         window.location.href = "/login.html"
+     }
+ }
+
+</script>
+{% endblock %}

@@ -1,0 +1,16 @@
+Flask==0.12.2
+Flask-Migrate==2.1.1
+Flask-SQLAlchemy==2.3.2
+Flask-Script==2.0.6
+Flask-Login==0.4.1
+Jinja2==2.10
+Flask-WTF
+Flask-Mail
+Werkzeug
+mako==1.0.7
+flask-moment
+MarkupSafe
+wheel
+flask_admin==1.5.0
+flask_babelex
+pillow

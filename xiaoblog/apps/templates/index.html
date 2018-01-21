@@ -1,0 +1,34 @@
+{% extends 'baseindex.html' %}
+
+{% block body %}
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                {%  for article in articles %}
+                <div class="post-preview">
+                    <a href="/article/{{ article.id }}">
+                        <h2 class="post-title">
+                          {{ article.title }}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{ article.content | safe | truncate(30) }}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">ouyangm</a> {{ article.create_time }}</p>
+                </div>
+                <hr>
+                {% endfor %}
+                 <!-- Pager -->
+                <div class="clearfix">
+                    <input type="hidden" name="page" id="page" value="{{ paginate.page }}" />
+                    <a class="btn btn-secondary float-right" href="javascrit:void();" onclick="nextpage()">Older Posts &rarr;</a>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+   {% block ext_js %}
+     function nextpage(){
+       page=parseInt($("#page").val());
+       window.location.href='/index.html?page='+(page+1);
+       }
+   {% endblock %}
