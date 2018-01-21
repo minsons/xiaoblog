@@ -1,4 +1,14 @@
 
+
+### 效果 
+
+![后台](001.png)
+----
+![首页](002.png)
+-----
+![文章页](003.png)
+
+
 ### install in linux
 
 * flask+gunicorn+nginx install
