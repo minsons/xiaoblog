@@ -15,10 +15,9 @@
 ** install nginx
 
 第一步：下载nginx安装源
-``rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm``
+ ``rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm``
 第二步：安装nginx
-
-``yum install nginx``
+  ``yum install nginx``
 第三步：修改配置文件
     配置文件集中在：
     config: /etc/nginx/nginx.conf     安装目录
@@ -28,9 +27,13 @@
 默认的配置在 /ect/nginx/conf.d/default.conf
 你可以在default里修改，也可以直接在ngnix.conf 里添加配置
 第四步：启动服务，关闭
+
    启动命令    service nginx start / systemctl start nginx
+   
    停止命令    service nginx stop / systemctl start nginx
+   
    重启命令    service nginx restart /systemctl restart nginx
+   
 
 
 ** install gunicorn
