@@ -17,6 +17,7 @@
 第一步：下载nginx安装源
 ``rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm``
 第二步：安装nginx
+
 ``yum install nginx``
 第三步：修改配置文件
     配置文件集中在：
@@ -31,11 +32,16 @@
    停止命令    service nginx stop / systemctl start nginx
    重启命令    service nginx restart /systemctl restart nginx
 
+
 ** install gunicorn
 第一步：安装：
+
     pip install gunicorn==19.7.1
+    
 第二步：配置启动
+
     gunicorn [options] module_name:variable_name
+    
 启动类为：
  ```python
  #esayblog.py
